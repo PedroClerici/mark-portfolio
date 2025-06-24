@@ -1,0 +1,28 @@
+---
+import { Image } from 'astro:assets';
+import littleHand from "../assets/maozinha.svg"
+---
+
+<main class="mx-auto max-w-7xl px-4 md:px-8 flex items-center h-screen">
+  <section class="flex flex-col gap-8">
+    <h1 class="font-bold font-intro-rust text-5xl/tight md:text-6xl/tight">
+      Eu sou o <span class="text-blue">mark</span><br/>
+      Um designer gráfico<br/>
+      Brasileiro!
+    </h1>
+
+    <p class="text-xl">
+      Sou um designer experiente com mais de 8 anos na área.<br/>
+      Colaborando com vários artistas, empresas e startups.
+    </p>
+
+    <div class="flex gap-4">
+      <button class="text-xl font-bold text-white bg-blue px-4 py-2 rounded-md">Ver Portfólio</button>
+      <button class="text-xl font-bold ring-2 ring-blue ring-inset px-4 py-2 rounded-md">Contato</button>
+    </div>
+  </section>
+
+  <div class="hidden mt-auto xl:block ">
+    <Image src={littleHand} alt='mãozinha' />
+  </div>
+</main>

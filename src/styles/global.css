@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "IntroRust";
+  src: url("/fonts/IntroRust.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-blue: #205cfc;
+
+  --color-gray-400: #f9f6f9;
+  --color-gray-500: #e0e3e8;
+
+  --font-montserrat: "Montserrat", serif;
+  --font-intro-rust: "IntroRust", serif;
+}
+
+@layer base {
+  :focus {
+    @apply outline-none ring-2 ring-yellow-700;
+  }
+
+  body {
+    @apply bg-gray-100 text-gray-900 antialiased font-montserrat;
+  }
+}

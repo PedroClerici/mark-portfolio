@@ -1,0 +1,29 @@
+---
+import after from '../assets/tools/after.png'
+import blockbench from '../assets/tools/blockbench.png'
+import canva from '../assets/tools/canva.png'
+import illustrator from '../assets/tools/illustrator.png'
+import photoshop from '../assets/tools/photoshop.png'
+import procreate from '../assets/tools/procreate.png'
+import Tool from './Tool.astro'
+---
+
+<section class="mx-auto max-w-7xl px-4 py-16 flex flex-col gap-8 items-center justify-center">
+  <h3 class="font-bold font-intro-rust text-4xl/tight text-center">
+    Ferramentas<br/>
+    Por trás dos meus <span class="text-blue">designs</span>
+  </h3>
+
+  <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-flow-col gap-4">
+    <Tool icon={procreate} percentage={98}/>
+    <Tool icon={photoshop} percentage={90}/>
+    <Tool icon={illustrator} percentage={63}/>
+    <Tool icon={after} percentage={86}/>
+    <Tool icon={canva} percentage={92}/>
+    <Tool icon={blockbench} percentage={80}/>
+  </div>
+
+  <!-- <h4 class="font-bold font-intro-rust text-2xl/tight text-center">
+    Menções Honrosas
+  </h4> -->
+</section>

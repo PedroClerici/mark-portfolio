@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets'
+import type { HTMLAttributes } from 'astro/types'
+import mouse from '../assets/mouse.svg'
+
+interface Props extends HTMLAttributes<'div'> {
+  title: string
+  icon: ImageMetadata
+  description: string
+}
+
+const {
+  icon,
+  title,
+  description,
+  children,
+  class: className,
+  ...attrs
+} = Astro.props
+---
+
+<div class:list={['relative flex flex-col bg-white rounded-xl p-6 gap-4 hover:cursor-pointer', className]} {...attrs}>
+  <Image class="size-16" src={icon} alt="" />
+
+  <div class="flex flex-col gap-2">
+    <span class="text-3xl font-bold font-intro-rust">{title}</span>
+    <p class="text-lg">{description}</p>
+  </div>
+  
+  <slot />
+
+  <Image class="absolute size-8 ml-auto right-4 bottom-4" src={mouse} alt="" />
+</div>

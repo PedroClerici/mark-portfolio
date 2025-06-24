@@ -1,0 +1,68 @@
+---
+import brand from '../assets/icons/brand.png'
+import concept from '../assets/icons/concept.png'
+import icons from '../assets/icons/icons.png'
+import mic from '../assets/icons/mic.png'
+import thumbnail from '../assets/icons/thumbnail.png'
+import Card from './Card.astro'
+---
+
+<section class="bg-blue">
+  <div class="flex flex-col mx-auto max-w-7xl py-16 px-4 md:px-8">
+    <h2 class="text-4xl text-white font-bold font-montserrat md:text-5xl">
+      Serviços que eu ofereço:
+    </h2>
+
+    <div class="my-8 grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <Card 
+        class="row-span-2"
+        icon={concept} 
+        title="Concept Art"
+        description="Dentro do grande ramo de concept art, eu realizo os seguintes trabalhos:"
+      >
+        <ul>
+          <li class="text-lg list-disc list-inside">Character Design</li>
+          <li class="text-lg list-disc list-inside">World Design & World Building</li>
+          <li class="text-lg list-disc list-inside">Environment Design</li>
+          <li class="text-lg list-disc list-inside">Storyboards</li>
+          <li class="text-lg list-disc list-inside">Posters</li>
+          <li class="text-lg list-disc list-inside">Design de Props/Objetos</li>
+          <li class="text-lg list-disc list-inside">Design de Figurinos</li>
+          <li class="text-lg list-disc list-inside">Criação de Mapas Fictícios</li>
+          <li class="text-lg list-disc list-inside">Cover Art (Capa para livros, etc)</li>
+        </ul>
+      </Card>
+
+      <Card 
+        icon={brand} 
+        title="Logo & Brand"
+        description="Criação de Identidade visual para logos e marcas, kit branding + mockups"
+      />
+
+      <Card 
+        icon={mic} 
+        title="LiveStream Kit"
+        description="Criação de Stream Bagdes, Emotes, Layots & Twitch Cards"
+      />
+
+      <Card 
+        icon={icons} 
+        title="Icons & Stickers"
+        description="Criação de Icons, PFP, Stickers, Banners e Headers"
+      />
+
+      <Card 
+        icon={thumbnail} 
+        title="YT Thumbnails"
+        description="Criação de Thumbnails para youtube, qualquer nicho e estilo desejado"
+      />
+    </div>
+
+    <div class="mb-6 w-full bg-white h-1 rounded-xl"/>
+
+    <ul class="flex flex-col justify-between md:flex-row">
+      <li class="text-xl font-bold text-white list-disc list-inside">Clique no tópico para conhecer mais sobre!</li>
+      <li class="text-xl font-bold text-white list-disc list-inside">Outros serviços podem ser discutido ao contato</li>
+    </ul>
+  </div>
+</section>
